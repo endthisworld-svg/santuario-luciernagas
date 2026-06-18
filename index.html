@@ -11,6 +11,27 @@
 </head>
 <body>
 
+    <!-- Pantalla inicial -->
+    <div id="startScreen">
+
+        <div class="start-content">
+
+            <div class="firefly-selector">
+
+                <div class="starter-firefly">✨</div>
+                <div class="starter-firefly">✨</div>
+                <div class="starter-firefly">✨</div>
+
+            </div>
+
+            <h1>Hay algo esperándote en el bosque...</h1>
+
+            <p>Toca una luciérnaga.</p>
+
+        </div>
+
+    </div>
+
     <!-- Fondo -->
     <div class="background-overlay"></div>
 
@@ -22,7 +43,6 @@
         <source src="assets/music.mp3" type="audio/mpeg">
     </audio>
 
-    <!-- Pantalla principal -->
     <main class="container">
 
         <section id="intro-section" class="card">
@@ -44,9 +64,13 @@
                 <p class="question-text">
                     El próximo <strong>25 de julio</strong> hay una expedición al
                     <strong>Santuario de las Luciérnagas de Nanacamilpa</strong>.
+
                     <br><br>
+
                     Y me preguntaba...
+
                     <br><br>
+
                     ¿Te gustaría acompañarme?
                 </p>
 
@@ -68,7 +92,6 @@
 
         </section>
 
-        <!-- Pantalla de aceptación -->
         <section id="success-section" class="success hidden">
 
             <div class="success-firefly">
@@ -126,9 +149,7 @@
 
                 <h3>📅 Fecha</h3>
 
-                <p>
-                    25 de julio
-                </p>
+                <p>25 de julio</p>
 
             </div>
 
@@ -147,24 +168,4 @@
     <script src="script.js"></script>
 
 </body>
-<div id="startScreen">
-
-    <div class="start-content">
-
-        <div class="firefly-selector">
-
-            <div class="starter-firefly" data-firefly="1">✨</div>
-
-            <div class="starter-firefly" data-firefly="2">✨</div>
-
-            <div class="starter-firefly" data-firefly="3">✨</div>
-
-        </div>
-
-        <h1>Hay algo esperándote en el bosque...</h1>
-
-        <p>Toca una luciérnaga.</p>
-
-    </div>
-</div>
 </html>
