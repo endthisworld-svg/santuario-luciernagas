@@ -30,8 +30,7 @@ function startExperience(selectedFirefly){
         console.log("Script cargado");
         console.log(
             document.querySelectorAll(".starter-firefly")
-        );
-        .forEach(fly => {
+        ).forEach(fly => {
 
             if(fly !== selectedFirefly){
 
