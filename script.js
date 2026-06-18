@@ -27,6 +27,10 @@ function startExperience(selectedFirefly){
 
     document
         .querySelectorAll(".starter-firefly")
+        console.log("Script cargado");
+        console.log(
+            document.querySelectorAll(".starter-firefly")
+        );
         .forEach(fly => {
 
             if(fly !== selectedFirefly){
@@ -383,7 +387,10 @@ document
 
         fly.addEventListener(
             "click",
-            () => startExperience(fly)
+            () => {
+                console.log("Luciérnaga clickeada");
+                startExperience(fly);
+            }
         );
 
         fly.addEventListener(
