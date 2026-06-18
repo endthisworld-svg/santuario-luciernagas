@@ -25,21 +25,16 @@ function startExperience(selectedFirefly){
 
     experienceStarted = true;
 
-    document
-        .querySelectorAll(".starter-firefly")
-        console.log("Script cargado");
-        console.log(
-            document.querySelectorAll(".starter-firefly")
-        ).forEach(fly => {
+    document.querySelectorAll(".starter-firefly").forEach(fly => {
 
-            if(fly !== selectedFirefly){
-
-                fly.style.opacity = "0";
-
-                fly.style.transform =
-                    "scale(.2)";
-            }
-        });
+        if (fly !== selectedFirefly) {
+    
+            fly.style.opacity = "0";
+            fly.style.transform = "scale(.2)";
+    
+        }
+    
+    });
 
     const rect =
         selectedFirefly.getBoundingClientRect();
