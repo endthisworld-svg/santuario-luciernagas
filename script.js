@@ -11,10 +11,77 @@ Pero incluso las noches más brillantes son mejores cuando se comparten.
 `;
 
 const typewriter = document.getElementById("typewriter");
+const startScreen =
+    document.getElementById("startScreen");
+const music =
+    document.getElementById("bgMusic");
+let experienceStarted = false;
 const questionContainer = document.getElementById("question-container");
 
 let index = 0;
+function startExperience(selectedFirefly){
 
+    if(experienceStarted) return;
+
+    experienceStarted = true;
+
+    document
+        .querySelectorAll(".starter-firefly")
+        .forEach(fly => {
+
+            if(fly !== selectedFirefly){
+
+                fly.style.opacity = "0";
+
+                fly.style.transform =
+                    "scale(.2)";
+            }
+        });
+
+    const rect =
+        selectedFirefly.getBoundingClientRect();
+
+    selectedFirefly.classList.add(
+        "selected-firefly"
+    );
+
+    selectedFirefly.style.left =
+        rect.left + "px";
+
+    selectedFirefly.style.top =
+        rect.top + "px";
+
+    setTimeout(() => {
+
+        selectedFirefly.style.left =
+            (window.innerWidth - 80) + "px";
+
+        selectedFirefly.style.top =
+            "120px";
+
+    }, 100);
+
+    if(music){
+
+        music.volume = 0.5;
+
+        music.play().catch(() => {});
+    }
+
+    setTimeout(() => {
+
+        startScreen.style.opacity = "0";
+
+    }, 1200);
+
+    setTimeout(() => {
+
+        startScreen.style.display = "none";
+
+        writeText();
+
+    }, 2200);
+}
 function writeText() {
     if (index < introText.length) {
         typewriter.innerHTML += introText.charAt(index);
@@ -26,8 +93,6 @@ function writeText() {
         }, 1200);
     }
 }
-
-writeText();
 
 
 // =========================
@@ -169,8 +234,6 @@ noBtn.addEventListener("touchstart", (e) => {
 
 const successSection = document.getElementById("success-section");
 const introSection = document.getElementById("intro-section");
-
-const music = document.getElementById("bgMusic");
 
 yesBtn.addEventListener("click", () => {
 
@@ -314,4 +377,17 @@ function updateCountdown() {
 
 updateCountdown();
 
-setInterval(updateCountdown, 1000);
+document
+    .querySelectorAll(".starter-firefly")
+    .forEach(fly => {
+
+        fly.addEventListener(
+            "click",
+            () => startExperience(fly)
+        );
+
+        fly.addEventListener(
+            "touchstart",
+            () => startExperience(fly)
+        );
+    });
