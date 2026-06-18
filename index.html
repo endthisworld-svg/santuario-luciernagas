@@ -1,1 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Una pequeña aventura ✨</title>
 
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Fondo -->
+    <div class="background-overlay"></div>
+
+    <!-- Luciérnagas -->
+    <div id="fireflies"></div>
+
+    <!-- Audio -->
+    <audio id="bgMusic" loop>
+        <source src="assets/music.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Pantalla principal -->
+    <main class="container">
+
+        <section id="intro-section" class="card">
+
+            <div class="glow-circle"></div>
+
+            <h1 class="title">
+                ✨ Una pequeña aventura ✨
+            </h1>
+
+            <div id="typewriter" class="typewriter"></div>
+
+            <div id="question-container" class="hidden">
+
+                <h2 class="question">
+                    Leti ✨
+                </h2>
+
+                <p class="question-text">
+                    El próximo <strong>25 de julio</strong> hay una expedición al
+                    <strong>Santuario de las Luciérnagas de Nanacamilpa</strong>.
+                    <br><br>
+                    Y me preguntaba...
+                    <br><br>
+                    ¿Te gustaría acompañarme?
+                </p>
+
+                <div class="buttons">
+
+                    <button id="yesBtn" class="yes-btn">
+                        ✨ Sí, quiero vivir la aventura
+                    </button>
+
+                    <button id="noBtn" class="no-btn">
+                        🪰 No
+                    </button>
+
+                </div>
+
+                <p id="funnyMessage" class="funny-message"></p>
+
+            </div>
+
+        </section>
+
+        <!-- Pantalla de aceptación -->
+        <section id="success-section" class="success hidden">
+
+            <div class="success-firefly">
+                ✨
+            </div>
+
+            <h1 class="success-title">
+                ✨ Felicidades ✨
+            </h1>
+
+            <h2 class="success-subtitle">
+                Oficialmente tenemos una cita.
+            </h2>
+
+            <div class="countdown-card">
+
+                <h3>
+                    ⏳ La expedición comienza en:
+                </h3>
+
+                <div class="countdown">
+
+                    <div class="time-box">
+                        <span id="days">00</span>
+                        <small>Días</small>
+                    </div>
+
+                    <div class="time-box">
+                        <span id="hours">00</span>
+                        <small>Horas</small>
+                    </div>
+
+                    <div class="time-box">
+                        <span id="minutes">00</span>
+                        <small>Minutos</small>
+                    </div>
+
+                    <div class="time-box">
+                        <span id="seconds">00</span>
+                        <small>Segundos</small>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="details">
+
+                <h3>📍 Destino</h3>
+
+                <p>
+                    Santuario de las Luciérnagas<br>
+                    Nanacamilpa, Tlaxcala
+                </p>
+
+                <h3>📅 Fecha</h3>
+
+                <p>
+                    25 de julio
+                </p>
+
+            </div>
+
+            <a
+                class="whatsapp-btn"
+                href="https://wa.me/522491720318?text=Acepto%20la%20misi%C3%B3n.%20Nos%20vemos%20entre%20las%20luci%C3%A9rnagas%20%E2%9C%A8"
+                target="_blank"
+            >
+                💬 Confirmar expedición
+            </a>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
