@@ -136,9 +136,17 @@ body::before {
 }
 
 .question{
+
     font-family:'Parisienne', cursive;
     font-size:4rem;
-    color:#d8b4fe;
+
+    color:rgba(230,210,255,.8);
+
+    text-shadow:
+        0 0 5px rgba(216,180,254,.3),
+        0 0 15px rgba(216,180,254,.2);
+
+    letter-spacing:2px;
 }
 
 .question-text {
