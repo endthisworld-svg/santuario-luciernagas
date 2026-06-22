@@ -215,23 +215,23 @@ button {
     text-align: center;
 }
 
-.success-firefly {
-    font-size: 5rem;
-    animation: pulseGlow 2s infinite;
+.success-firefly{
+
+    display:flex;
+    justify-content:center;
+
+    margin-bottom:20px;
 }
 
-@keyframes pulseGlow {
-    0% {
-        transform: scale(1);
-    }
+.success-firefly .starter-firefly{
 
-    50% {
-        transform: scale(1.2);
-    }
+    width:140px;
+    height:140px;
+}
+.success-firefly .firefly-body{
 
-    100% {
-        transform: scale(1);
-    }
+    width:40px;
+    height:40px;
 }
 
 .success-title {
