@@ -197,7 +197,7 @@ function moveNoButton() {
         noBtn.style.pointerEvents = "none";
 
         funnyMessage.textContent =
-            "De todos modos ya me habías dicho que sí! 😏😂";
+            "De todos modos ya me habías dicho que sí! 😏😂 Picale al jalo para confirmar 🤔";
 
         return;
     }
