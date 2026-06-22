@@ -197,7 +197,7 @@ function moveNoButton() {
         noBtn.style.pointerEvents = "none";
 
         funnyMessage.textContent =
-            "Está bien... ya entendí que quieres presionarme 😔🪰";
+            "De todos modos ya me habías dicho que sí! 😏😂";
 
         return;
     }
