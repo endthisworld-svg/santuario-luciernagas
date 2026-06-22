@@ -3,15 +3,15 @@
 // =========================
 
 const introText = `
-En algunas noches, la naturaleza guarda espectáculos que parecen imposibles...
+En algunas noches, la naturaleza ofrece espectáculos que parecen imposibles...
 
-Miles de pequeñas luces despiertan entre los árboles
 
-y transforman el bosque en algo mágico...
+Miles de pequeñas luces parpadean entre los árboles
+y transforman el bosque en una escena de cuento...
 
-Pero incluso las noches más brillantes
 
-son mejores cuando se comparten.
+Y esas noches más brillantes
+merecen una buena compañía.
 `;
 
 const typewriter = document.getElementById("typewriter");
