@@ -170,13 +170,13 @@ const yesBtn = document.getElementById("yesBtn");
 const funnyMessage = document.getElementById("funnyMessage");
 
 const messages = [
-    "Las luciérnagas desaprueban esa decisión ✨",
-    "Esa opción se perdió en el bosque 🌲",
-    "Error 404: respuesta no encontrada 🪰",
-    "Las probabilidades de elegir 'No' son extremadamente bajas 😏",
-    "La luciérnaga escondió el botón ✨",
-    "Esa respuesta no está disponible esta noche 🌙",
-    "Buen intento... pero no 😌"
+    "¡Ah! ¿No quieres? 🥺✨",
+    "Vamos, el bosque está lindo 🌲🪰🌙",
+    "Ándaleeee 😏✨",
+    "¿Por qué quieres elegir que no? 🤔",
+    "Vamooooooos 🌲✨",
+    "Si dices que no, se apaga la luna y nos morimos todos 🌙💀😂",
+    "Jajaja... ¿por qué no? 😂"
 ];
 
 let yesScale = 1;
