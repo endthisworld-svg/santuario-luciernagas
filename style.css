@@ -127,6 +127,7 @@ body::before {
     font-size: 1.1rem;
     color: #f4f4f4;
     min-height: 170px;
+    white-space: pre-line;
 }
 
 .hidden {
