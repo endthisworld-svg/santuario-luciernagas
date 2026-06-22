@@ -135,17 +135,15 @@ body::before {
     display: none;
 }
 
-.question{
+.question {
+    margin-top: 30px;
+    font-size: 2.4rem;
 
-    font-family:'Great Vibes', cursive;
-
-    font-size:4rem;
-
-    color:#d8b4fe;
+    color: #d8b4fe;
 
     text-shadow:
         0 0 10px rgba(216,180,254,.6),
-        0 0 25px rgba(216,180,254,.4);
+        0 0 20px rgba(216,180,254,.4);
 }
 
 .question-text {
