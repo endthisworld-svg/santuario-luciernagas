@@ -6,9 +6,11 @@ const introText = `
 En algunas noches, la naturaleza guarda espectáculos que parecen imposibles...
 
 
+
 Miles de pequeñas luces despiertan entre los árboles
 
 y transforman el bosque en algo mágico...
+
 
 
 Pero incluso las noches más brillantes
@@ -87,14 +89,27 @@ function startExperience(selectedFirefly){
     }, 2200);
 }
 function writeText() {
+
     if (index < introText.length) {
-        typewriter.innerHTML += introText.charAt(index);
+
+        const char = introText.charAt(index);
+
+        if(char === "\n"){
+            typewriter.innerHTML += "<br>";
+        }else{
+            typewriter.innerHTML += char;
+        }
+
         index++;
+
         setTimeout(writeText, 35);
+
     } else {
+
         setTimeout(() => {
             questionContainer.classList.remove("hidden");
         }, 1200);
+
     }
 }
 
