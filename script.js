@@ -183,11 +183,25 @@ let yesScale = 1;
 
 function moveNoButton() {
 
-    const maxX = window.innerWidth - 180;
-    const maxY = window.innerHeight - 120;
+    const buttonWidth = noBtn.offsetWidth;
+    const buttonHeight = noBtn.offsetHeight;
 
-    const randomX = Math.random() * maxX;
-    const randomY = Math.random() * maxY;
+    const padding = 20;
+
+    const maxX =
+        window.innerWidth - buttonWidth - padding;
+
+    const maxY =
+        window.innerHeight - buttonHeight - padding;
+
+    const minX = padding;
+    const minY = padding;
+
+    const randomX =
+        Math.random() * (maxX - minX) + minX;
+
+    const randomY =
+        Math.random() * (maxY - minY) + minY;
 
     noBtn.style.position = "fixed";
     noBtn.style.left = randomX + "px";
