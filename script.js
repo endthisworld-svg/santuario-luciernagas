@@ -183,36 +183,80 @@ let yesScale = 1;
 
 function moveNoButton() {
 
+    noCounter++;
+
+    // Después de 7 intentos desaparece
+    if(noCounter >= 7){
+
+        noBtn.style.opacity = "0";
+
+        noBtn.style.pointerEvents = "none";
+
+        funnyMessage.textContent =
+            "Está bien... ya entendí que quieres presionarme 😔🪰";
+
+        return;
+    }
+
     const buttonWidth = noBtn.offsetWidth;
     const buttonHeight = noBtn.offsetHeight;
 
-    const padding = 20;
+    const margin = 30;
 
     const maxX =
-        window.innerWidth - buttonWidth - padding;
+        document.documentElement.clientWidth
+        - buttonWidth
+        - margin;
 
     const maxY =
-        window.innerHeight - buttonHeight - padding;
+        document.documentElement.clientHeight
+        - buttonHeight
+        - margin;
 
-    const minX = padding;
-    const minY = padding;
+    const minX = margin;
+    const minY = 120;
 
-    const randomX =
-        Math.random() * (maxX - minX) + minX;
+    let randomX;
+    let randomY;
 
-    const randomY =
-        Math.random() * (maxY - minY) + minY;
+    let tries = 0;
+
+    do {
+
+        randomX =
+            Math.random() * (maxX - minX) + minX;
+
+        randomY =
+            Math.random() * (maxY - minY) + minY;
+
+        tries++;
+
+    } while (
+
+        Math.abs(randomX - lastX) < 150 &&
+        Math.abs(randomY - lastY) < 100 &&
+        tries < 20
+
+    );
+
+    lastX = randomX;
+    lastY = randomY;
 
     noBtn.style.position = "fixed";
-    noBtn.style.left = randomX + "px";
-    noBtn.style.top = randomY + "px";
+    noBtn.style.left = `${randomX}px`;
+    noBtn.style.top = `${randomY}px`;
 
     yesScale += 0.08;
 
-    yesBtn.style.transform = `scale(${yesScale})`;
+    yesBtn.style.transform =
+        `scale(${yesScale})`;
 
     funnyMessage.textContent =
-        messages[Math.floor(Math.random() * messages.length)];
+        messages[
+            Math.floor(
+                Math.random() * messages.length
+            )
+        ];
 
     spawnEscapeFirefly(randomX, randomY);
 }
