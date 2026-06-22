@@ -3,7 +3,7 @@
 // =========================
 
 const introText = `
-En algunas noches, la naturaleza ofrece espectáculos que parecen imposibles...
+Algunas noches, la naturaleza ofrece espectáculos hermosos imposibles de capturar con la lente de una cámara...
 
 
 Miles de pequeñas luces parpadean entre los árboles
