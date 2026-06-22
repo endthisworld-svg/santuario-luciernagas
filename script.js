@@ -6,11 +6,9 @@ const introText = `
 En algunas noches, la naturaleza guarda espectáculos que parecen imposibles...
 
 
-
 Miles de pequeñas luces despiertan entre los árboles
 
 y transforman el bosque en algo mágico...
-
 
 
 Pero incluso las noches más brillantes
