@@ -168,6 +168,10 @@ const noBtn = document.getElementById("noBtn");
 const yesBtn = document.getElementById("yesBtn");
 
 const funnyMessage = document.getElementById("funnyMessage");
+let lastX = 0;
+let lastY = 0;
+
+let noCounter = 0;
 
 const messages = [
     "¡Ah! ¿No quieres? 🥺✨",
