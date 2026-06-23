@@ -244,8 +244,7 @@ button {
 }
 .success-firefly .firefly-body{
 
-    width:40px;
-    height:40px;
+    transform:scale(1.4);
 }
 
 .success-title {
@@ -701,7 +700,8 @@ button {
 
     display:flex;
     justify-content:center;
-    margin-bottom:30px;
+
+    margin:15px 0;
 }
 
 .success-firefly .starter-firefly{
@@ -844,4 +844,28 @@ button {
 
         font-size:1rem;
     }
+}
+.title{
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:20px;
+
+    text-align:center;
+}
+
+.title-firefly{
+
+    width:70px;
+    height:70px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.title-firefly .firefly-body{
+
+    transform:scale(1.3);
 }
