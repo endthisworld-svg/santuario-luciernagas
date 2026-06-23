@@ -176,11 +176,11 @@ let noCounter = 0;
 const messages = [
     "¡Ah! ¿No quieres? 🥺✨",
     "Vamos, el bosque está lindo 🌲🪰🌙",
-    "Ándaleeee 😏✨",
-    "¿Por qué quieres elegir que no? 🤔",
+    "Por favooor 🥹✨",
+    "¿Por qué quieres elegir que no? 🥹",
     "Vamooooooos 🌲✨",
-    "Si dices que no, se apaga la luna y nos morimos todos 🌙💀😂",
-    "Jajaja... ¿por qué no? 😂"
+    "Si dices que no, se apaga la luna y nos morimos todos 🌙💀",
+    "'¿Por qué no? 🥹"
 ];
 
 let yesScale = 1;
@@ -197,7 +197,7 @@ function moveNoButton() {
         noBtn.style.pointerEvents = "none";
 
         funnyMessage.textContent =
-            "De todos modos ya me habías dicho que sí! 😏😂 Picale al jalo para confirmar 🤔";
+            "💜 Hay lugares bonitos, pero creo que son mejores cuando se visitan con la compañía correcta. 🌙";
 
         return;
     }
