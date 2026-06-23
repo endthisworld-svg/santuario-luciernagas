@@ -601,21 +601,18 @@ button {
     }
 
     25%{
-        transform:
-            translateY(-10px)
-            translateX(6px);
+        transform:translateY(-8px)
+                  translateX(3px);
     }
 
     50%{
-        transform:
-            translateY(-20px)
-            translateX(-8px);
+        transform:translateY(-14px)
+                  translateX(-3px);
     }
 
     75%{
-        transform:
-            translateY(-8px)
-            translateX(10px);
+        transform:translateY(-6px)
+                  translateX(4px);
     }
 
     100%{
@@ -791,4 +788,60 @@ button {
 .details p{
 
     color:#f4f4f4;
+}
+/* =========================
+   AJUSTES MÓVIL
+========================= */
+
+#startScreen{
+    overflow:hidden;
+}
+
+@media (max-width:768px){
+
+    .start-content{
+
+        width:100%;
+        max-width:320px;
+
+        padding:20px;
+    }
+
+    .firefly-selector{
+
+        gap:12px;
+
+        width:100%;
+
+        justify-content:center;
+    }
+
+    .starter-firefly{
+
+        width:55px;
+        height:55px;
+    }
+
+    .firefly-body{
+
+        width:14px;
+        height:14px;
+    }
+
+    .firefly-body::before,
+    .firefly-body::after{
+
+        width:14px;
+        height:8px;
+    }
+
+    .start-content h1{
+
+        font-size:1.5rem;
+    }
+
+    .start-content p{
+
+        font-size:1rem;
+    }
 }
