@@ -324,28 +324,43 @@ button {
     margin-top: 15px;
 }
 
-.whatsapp-btn {
-    display: inline-block;
+.whatsapp-btn{
 
-    margin-top: 35px;
+    display:inline-block;
 
-    text-decoration: none;
+    margin-top:40px;
 
-    color: #111;
+    text-decoration:none;
 
-    background: #ffe38a;
+    color:white;
 
-    padding: 18px 30px;
+    background:
+        linear-gradient(
+            135deg,
+            #a855f7,
+            #7c3aed
+        );
 
-    border-radius: 18px;
+    padding:18px 34px;
 
-    font-weight: 700;
+    border-radius:20px;
 
-    transition: .3s;
+    font-weight:600;
+
+    box-shadow:
+        0 0 20px rgba(168,85,247,.35);
+
+    transition:.3s;
 }
 
-.whatsapp-btn:hover {
-    transform: translateY(-3px);
+.whatsapp-btn:hover{
+
+    transform:
+        translateY(-4px)
+        scale(1.03);
+
+    box-shadow:
+        0 0 35px rgba(168,85,247,.55);
 }
 
 /* Luciérnagas */
@@ -680,4 +695,100 @@ button {
 .start-content p{
     margin-top:15px;
     color:#ddd;
+}
+/* =========================
+   PANTALLA FINAL NUEVA
+========================= */
+
+.success-firefly{
+
+    display:flex;
+    justify-content:center;
+    margin-bottom:30px;
+}
+
+.success-firefly .starter-firefly{
+
+    transform:scale(1.8);
+    pointer-events:none;
+}
+
+.success-title{
+
+    color:#ffe38a;
+
+    text-shadow:
+        0 0 10px rgba(255,227,138,.7),
+        0 0 30px rgba(255,227,138,.35);
+
+    margin-bottom:20px;
+}
+
+.success-subtitle{
+
+    color:#d8b4fe;
+
+    font-weight:300;
+
+    letter-spacing:.5px;
+
+    margin-bottom:40px;
+}
+
+.countdown-card{
+
+    background:
+        rgba(15,20,30,.55);
+
+    backdrop-filter:blur(14px);
+
+    border:
+        1px solid rgba(216,180,254,.15);
+
+    box-shadow:
+        0 0 30px rgba(216,180,254,.08);
+
+    border-radius:30px;
+}
+
+.countdown-card h3{
+
+    color:#ffe38a;
+}
+
+.time-box{
+
+    background:
+        rgba(168,85,247,.12);
+
+    border:
+        1px solid rgba(216,180,254,.25);
+
+    box-shadow:
+        0 0 15px rgba(168,85,247,.12);
+
+    transition:.3s;
+}
+
+.time-box:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+        0 0 25px rgba(216,180,254,.25);
+}
+
+.time-box span{
+
+    color:#ffe38a;
+}
+
+.details h3{
+
+    color:#d8b4fe;
+}
+
+.details p{
+
+    color:#f4f4f4;
 }
