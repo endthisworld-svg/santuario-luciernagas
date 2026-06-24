@@ -210,6 +210,10 @@ button {
     box-shadow:
         0 0 10px rgba(168,85,247,.25),
         0 0 25px rgba(168,85,247,.15);
+    transition:
+        transform .25s ease,
+        left .25s ease,
+        top .25s ease;
 }
 
 .funny-message {
