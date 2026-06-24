@@ -28,20 +28,6 @@ function startExperience(selectedFirefly){
     if(experienceStarted) return;
 
     experienceStarted = true;
-    if (music) {
-
-        music.volume = 0.35;
-    
-        music.currentTime = 0;
-    
-        music.play()
-            .then(() => {
-                console.log("Música iniciada");
-            })
-            .catch(err => {
-                console.log("Error audio:", err);
-            });
-    }
     document.querySelectorAll(".starter-firefly").forEach(fly => {
 
         if (fly !== selectedFirefly) {
@@ -525,11 +511,30 @@ function unlockAudio() {
 updateCountdown();
 setInterval(updateCountdown, 1000);
 document
-.querySelectorAll(".starter-firefly")
+    .querySelectorAll(".starter-firefly")
     .forEach(fly => {
-    
+
         fly.addEventListener("pointerdown", () => {
-            unlockAudio();
+
+            if(music){
+
+                music.volume = 0.35;
+
+                music.play()
+                    .then(() => {
+
+                        console.log("Audio iniciado desde pointerdown");
+
+                    })
+                    .catch(err => {
+
+                        console.log(err);
+
+                    });
+            }
+
             startExperience(fly);
+
         });
-});
+
+    });
