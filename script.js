@@ -501,23 +501,35 @@ function updateCountdown() {
     secondsEl.textContent =
         String(seconds).padStart(2, "0");
 }
+function unlockAudio() {
+
+    if (!music) return;
+
+    music.play()
+        .then(() => {
+
+            music.pause();
+
+            music.currentTime = 0;
+
+            console.log("Audio desbloqueado");
+
+        })
+        .catch(err => {
+
+            console.log(err);
+
+        });
+}
 
 updateCountdown();
 setInterval(updateCountdown, 1000);
 document
-    .querySelectorAll(".starter-firefly")
+.querySelectorAll(".starter-firefly")
     .forEach(fly => {
-
-        fly.addEventListener(
-            "click",
-            () => {
-                console.log("Luciérnaga clickeada");
-                startExperience(fly);
-            }
-        );
-
-        fly.addEventListener(
-            "touchstart",
-            () => startExperience(fly)
-        );
-    });
+    
+        fly.addEventListener("pointerdown", () => {
+            unlockAudio();
+            startExperience(fly);
+        });
+});
