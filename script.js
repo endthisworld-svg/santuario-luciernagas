@@ -28,7 +28,20 @@ function startExperience(selectedFirefly){
     if(experienceStarted) return;
 
     experienceStarted = true;
+    if (music) {
 
+        music.volume = 0.35;
+    
+        music.currentTime = 0;
+    
+        music.play()
+            .then(() => {
+                console.log("Música iniciada");
+            })
+            .catch(err => {
+                console.log("Error audio:", err);
+            });
+    }
     document.querySelectorAll(".starter-firefly").forEach(fly => {
 
         if (fly !== selectedFirefly) {
@@ -202,6 +215,40 @@ function moveNoButton() {
         return;
     }
 
+    // MÓVIL
+    if(window.innerWidth < 768){
+
+        const offsetX =
+            (Math.random() * 120) - 60;
+
+        const offsetY =
+            (Math.random() * 80) - 40;
+
+        noBtn.style.position = "relative";
+
+        noBtn.style.left = "0";
+        noBtn.style.top = "0";
+
+        noBtn.style.transform =
+            `translate(${offsetX}px, ${offsetY}px)`;
+
+        yesScale += 0.08;
+
+        yesBtn.style.transform =
+            `scale(${yesScale})`;
+
+        funnyMessage.textContent =
+            messages[
+                Math.floor(
+                    Math.random() * messages.length
+                )
+            ];
+
+        return;
+    }
+
+    // ESCRITORIO
+
     const buttonWidth = noBtn.offsetWidth;
     const buttonHeight = noBtn.offsetHeight;
 
@@ -263,6 +310,9 @@ function moveNoButton() {
         ];
 
     spawnEscapeFirefly(randomX, randomY);
+
+    yesBtn.style.zIndex = "1000";
+    noBtn.style.zIndex = "999";
 }
 
 function spawnEscapeFirefly(x, y) {
