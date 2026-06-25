@@ -28,16 +28,31 @@ function startExperience(selectedFirefly){
     if(experienceStarted) return;
 
     experienceStarted = true;
-    document.querySelectorAll(".starter-firefly").forEach(fly => {
-
-        if (fly !== selectedFirefly) {
-    
-            fly.style.opacity = "0";
-            fly.style.transform = "scale(.2)";
-    
-        }
-    
-    });
+    document
+        .querySelectorAll(".starter-firefly")
+        .forEach(fly => {
+        
+            fly.addEventListener("pointerdown", async () => {
+        
+                try{
+        
+                    music.volume = 0.35;
+        
+                    await music.play();
+        
+                    console.log("Audio reproduciéndose");
+        
+                }catch(err){
+        
+                    console.log(err);
+        
+                }
+        
+                startExperience(fly);
+        
+            });
+        
+        });
 
     const rect =
         selectedFirefly.getBoundingClientRect();
@@ -61,13 +76,6 @@ function startExperience(selectedFirefly){
             "120px";
 
     }, 100);
-
-    if(music){
-
-        music.volume = 0.5;
-
-        music.play().catch(() => {});
-    }
 
     setTimeout(() => {
 
@@ -513,28 +521,25 @@ setInterval(updateCountdown, 1000);
 document
     .querySelectorAll(".starter-firefly")
     .forEach(fly => {
-
-        fly.addEventListener("pointerdown", () => {
-
-            if(music){
-
+    
+        fly.addEventListener("pointerdown", async () => {
+    
+            try{
+    
                 music.volume = 0.35;
-
-                music.play()
-                    .then(() => {
-
-                        console.log("Audio iniciado desde pointerdown");
-
-                    })
-                    .catch(err => {
-
-                        console.log(err);
-
-                    });
+    
+                await music.play();
+    
+                console.log("Audio reproduciéndose");
+    
+            }catch(err){
+    
+                console.log(err);
+    
             }
-
+    
             startExperience(fly);
-
+    
         });
-
+    
     });
